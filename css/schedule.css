@@ -1,7 +1,15 @@
-
-#schedule iframe{
-    width: 92.8%;
-    height: 250px;
-    margin-left: 60px;
+#schedule table{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid black;
+}
+
+#schedule table tr{
+    border: 1px solid black;
+}
+
+#schedule table td{
+    border: 1px solid black;
+    padding-left: 5px;
 }
