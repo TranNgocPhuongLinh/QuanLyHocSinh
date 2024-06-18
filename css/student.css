@@ -1,0 +1,24 @@
+#form-hoc-sinh{
+    border: 1px solid black;
+    margin: 10px 20px 10px 20px;
+    padding: 10px;
+}
+
+#form-hoc-sinh button{
+    margin-left: 10px;
+    width: 60px;
+}
+
+#student-table table{
+    border: 1px solid black;
+    width: 50%;
+}
+
+#student-table table thead tr th{
+    border: 1px solid black;
+}
+
+#student-table table tbody tr td{
+    border: 1px solid black;
+
+}
