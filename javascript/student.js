@@ -19,41 +19,41 @@ function addStudent(name, grade, gioiTinh, ngayHoc, monHoc, hocPhi) {
 }
 
 function renderStudentTable() {
-  students = localStorage.getItem('students')? JSON.parse(localStorage.getItem('students')) : [];
-  let studentList = document.getElementById('student-list');
-  studentList.innerHTML = '';
-  students.forEach((student, index) => {
-    let tableRow = document.createElement('tr');
-    tableRow.innerHTML = `
-      <td>${student.name}</td>
-      <td>${student.grade}</td>
-      <td>${student.gioiTinh}</td>
-      <td>${student.ngayHoc}</td>
-      <td>${student.monHoc}</td>
-      <td>${student.hocPhi}</td>
-      <td>
-      <button class="edit-btn" data-index="${index}">
-      <i class="fa-solid fa-pen-to-square"></i></button>
-      <button class="delete-btn" data-index="${index}">
-      <i class="fa-solid fa-trash"></i></button>
-      </td>
-    `;
-    studentList.appendChild(tableRow);
-  });
+    students = JSON.parse(localStorage.getItem('students')) || [];
+    let studentList = document.getElementById('student-list');
+    studentList.innerHTML = '';
+    students.forEach((student, index) => {
+      let tableRow = document.createElement('tr');
+      tableRow.innerHTML = `
+        <td>${student.name}</td>
+        <td>${student.grade}</td>
+        <td>${student.gioiTinh}</td>
+        <td>${student.ngayHoc}</td>
+        <td>${student.monHoc}</td>
+        <td>${student.hocPhi}</td>
+        <td>
+        <button class="edit-btn" data-index="${index}">
+        <i class="fa-solid fa-pen-to-square"></i></button>
+        <button class="delete-btn" data-index="${index}">
+        <i class="fa-solid fa-trash"></i></button>
+        </td>
+      `;
+      studentList.appendChild(tableRow);
+    });
+    
+    let deleteBtns = document.querySelectorAll('.delete-btn');
+    deleteBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        deleteStudent(btn.dataset.index);
+      });
+    });
   
-  let deleteBtns = document.querySelectorAll('.delete-btn');
-  deleteBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      deleteStudent(btn.dataset.index);
+    let editBtns = document.querySelectorAll('.edit-btn');
+    editBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        editStudent(btn.dataset.index);
+      });
     });
-  });
-
-  let editBtns = document.querySelectorAll('.edit-btn');
-  editBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      editStudent(btn.dataset.index);
-    });
-  });
 }
 
 function deleteStudent(index) {
