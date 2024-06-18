@@ -79,14 +79,15 @@ function editStudent(index) {
     hocPhiInput.value = student.hocPhi;
     
     let saveButton = document.getElementById('save-btn');
-    saveButton.addEventListener('click', () => {
-      student.name = nameInput.value;
-      student.grade = gradeInput.value;
-      student.gioiTinh = gioiTinhInput.value;
-      student.ngayHoc = ngayHocInput.value;
-      student.monHoc = monHocInput.value;
-      student.hocPhi = hocPhiInput.value;
-      editSection.style.display = 'none'; // hide the popup edit section
-      renderStudentTable();
+    saveButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        student.name = nameInput.value;
+        student.grade = gradeInput.value;
+        student.gioiTinh = gioiTinhInput.value;
+        student.ngayHoc = ngayHocInput.value;
+        student.monHoc = monHocInput.value;
+        student.hocPhi = hocPhiInput.value;
+        editSection.style.display = 'none'; // hide the popup edit section
+        renderStudentTable();
     });
   }
