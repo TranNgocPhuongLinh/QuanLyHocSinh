@@ -17,6 +17,10 @@
     margin: 20px auto 20px auto;
 }
 
+#student-table h2{
+    text-align: center;
+}
+
 #student-table table{
     border: 1px solid black;
     width: 100%;
@@ -24,10 +28,13 @@
 
 #student-table table thead tr th{
     border: 1px solid black;
+    padding-left: 3px;
+    text-align: center;
 }
 
 #student-table table tbody tr td{
     border: 1px solid black;
+    padding-left: 3px;
 
 }
 
