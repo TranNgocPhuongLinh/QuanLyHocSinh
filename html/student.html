@@ -22,6 +22,9 @@
         <div id="input">
             <h2>Nhập danh sách học sinh</h2>
             <form id="form-hoc-sinh">
+                <label for="id">ID: </label>
+                <input type="text" id="id" name="id" required>
+
                 <label for="name">Tên: </label>
                 <input type="text" id="name" name="ten" required>
         
@@ -52,6 +55,7 @@
             <table>
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>Tên</th>
                         <th>Khối</th>
                         <th>Giới tính</th>
@@ -70,25 +74,28 @@
         <div id="edit-section" style="display: none;">
             <h2>Edit Student</h2>
             <form>
-              <label>Name:</label>
-              <input type="text" id="edit-name" />
-              <br />
-              <label>Grade:</label>
-              <input type="text" id="edit-grade" />
-              <br />
-              <label>Giới Tính:</label>
-              <input type="text" id="edit-gioi-tinh" />
-              <br />
-              <label>Ngày Học:</label>
-              <input type="text" id="edit-date" />
-              <br />
-              <label>Môn Học:</label>
-              <input type="text" id="edit-subject" />
-              <br />
-              <label>Học Phí:</label>
-              <input type="text" id="edit-fee" />
-              <br />
-              <button id="save-btn">Save</button>
+                <label>ID: </label>
+                <input type="text" id="edit-id">
+                <br />
+                <label>Name:</label>
+                <input type="text" id="edit-name" />
+                <br />
+                <label>Grade:</label>
+                <input type="text" id="edit-grade" />
+                <br />
+                <label>Giới Tính:</label>
+                <input type="text" id="edit-gioi-tinh" />
+                <br />
+                <label>Ngày Học:</label>
+                <input type="text" id="edit-date" />
+                <br />
+                <label>Môn Học:</label>
+                <input type="text" id="edit-subject" />
+                <br />
+                <label>Học Phí:</label>
+                <input type="text" id="edit-fee" />
+                <br />
+                <button id="save-btn">Save</button>
             </form>
           </div>
         <script src="../javascript/student.js"></script>

@@ -2,21 +2,26 @@ let students = [];
 
 document.getElementById('form-hoc-sinh').addEventListener('submit', (e) => {
   e.preventDefault();
+  let id = document.getElementById('id').value;
   let name = document.getElementById('name').value;
   let grade = document.getElementById('grade').value;
   let gioiTinh = document.getElementById('gioi-tinh').value;
   let ngayHoc = document.getElementById('date').value;
   let monHoc = document.getElementById('subject').value;
   let hocPhi = document.getElementById('fee').value;
-  addStudent(name, grade, gioiTinh, ngayHoc, monHoc, hocPhi);
+  addStudent(id, name, grade, gioiTinh, ngayHoc, monHoc, hocPhi);
 });
 
-function addStudent(name, grade, gioiTinh, ngayHoc, monHoc, hocPhi) {
-  let student = { name, grade, gioiTinh, ngayHoc, monHoc, hocPhi };
+function addStudent(id, name, grade, gioiTinh, ngayHoc, monHoc, hocPhi) {
+  let student = { id, name, grade, gioiTinh, ngayHoc, monHoc, hocPhi };
   students.push(student);
   localStorage.setItem('students', JSON.stringify(students));
   renderStudentTable();
 }
+
+window.addEventListener('load',() => {
+  renderStudentTable();
+});
 
 function renderStudentTable() {
     students = JSON.parse(localStorage.getItem('students')) || [];
@@ -25,6 +30,7 @@ function renderStudentTable() {
     students.forEach((student, index) => {
       let tableRow = document.createElement('tr');
       tableRow.innerHTML = `
+        <td>${student.id}</td>
         <td>${student.name}</td>
         <td>${student.grade}</td>
         <td>${student.gioiTinh}</td>
@@ -67,6 +73,7 @@ function editStudent(index) {
   let editSection = document.getElementById('edit-section');
   editSection.style.display = 'block'; // show the popup edit section
   
+  let idInput = document.getElementById('edit-id');
   let nameInput = document.getElementById('edit-name');
   let gradeInput = document.getElementById('edit-grade');
   let gioiTinhInput = document.getElementById('edit-gioi-tinh');
@@ -74,6 +81,7 @@ function editStudent(index) {
   let monHocInput = document.getElementById('edit-subject');
   let hocPhiInput = document.getElementById('edit-fee');
   
+  idInput.value = student.id;
   nameInput.value = student.name;
   gradeInput.value = student.grade;
   gioiTinhInput.value = student.gioiTinh;
@@ -84,6 +92,7 @@ function editStudent(index) {
   let saveButton = document.getElementById('save-btn');
   saveButton.addEventListener('click', (e) => {
     e.preventDefault();
+    student.id = idInput.value;
     student.name = nameInput.value;
     student.grade = gradeInput.value;
     student.gioiTinh = gioiTinhInput.value;
