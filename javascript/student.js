@@ -70,7 +70,10 @@ function deleteStudent(index) {
 function editStudent(index) {
   let student = students[index];
   let editSection = document.getElementById('edit-section');
+  let overlay = document.querySelector('.overlay');
+  
   editSection.style.display = 'block'; // show the popup edit section
+  overlay.classList.add('show-popup');
   
   let idInput = document.getElementById('edit-id');
   let nameInput = document.getElementById('edit-name');
@@ -100,6 +103,14 @@ function editStudent(index) {
     student.hocPhi = hocPhiInput.value;
     localStorage.setItem('students', JSON.stringify(students));
     editSection.style.display = 'none'; // hide the popup edit section
+    overlay.classList.remove('show-popup');
     renderStudentTable();
+  });
+
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('overlay') || e.target.classList.contains('close-btn')) {
+      editSection.style.display = 'none'; // hide the popup edit section
+      overlay.classList.remove('show-popup'); // hide the overlay
+    }
   });
 }

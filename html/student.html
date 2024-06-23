@@ -71,36 +71,40 @@
             </table>
         </div>
 
+        <div class="overlay"></div>
+
         <div id="edit-section" style="display: none;">
             <h2>Edit Student</h2>
-            <form>
+            <form id="form-edit">
                 <label>ID: </label>
                 <input type="text" id="edit-id">
                 <br />
-                <label>Name:</label>
+                <label>Name: </label>
                 <input type="text" id="edit-name" />
                 <br />
-                <label>Grade:</label>
+                <label>Grade: </label>
                 <input type="text" id="edit-grade" />
                 <br />
-                <label>Giới Tính:</label>
+                <label>Giới Tính: </label>
                 <select id="edit-gioi-tinh" name="gioi-tinh" required>
                     <option value="Nam">Nam</option>
                     <option value="Nữ">Nữ</option>
                 </select>
                 <br />
-                <label>Ngày Học:</label>
+                <label>Ngày Học: </label>
                 <input type="text" id="edit-date" />
                 <br />
-                <label>Môn Học:</label>
+                <label>Môn Học: </label>
                 <input type="text" id="edit-subject" />
                 <br />
-                <label>Học Phí:</label>
+                <label>Học Phí: </label>
                 <input type="text" id="edit-fee" />
                 <br />
                 <button id="save-btn">Save</button>
             </form>
+            <button class="close-btn">Close</button>
           </div>
+
         <script src="../javascript/student.js"></script>
     </body>
 </html>
