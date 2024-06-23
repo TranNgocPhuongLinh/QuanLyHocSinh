@@ -50,7 +50,7 @@
             </form>
         </div>
 
-        <div id="student-table">
+        <div class="col-lg-8 col-md-10 col-sm-12" id="student-table">
             <h2>DANH SÁCH HỌC SINH</h2>
             <table>
                 <thead>
@@ -84,7 +84,10 @@
                 <input type="text" id="edit-grade" />
                 <br />
                 <label>Giới Tính:</label>
-                <input type="text" id="edit-gioi-tinh" />
+                <select id="edit-gioi-tinh" name="gioi-tinh" required>
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                </select>
                 <br />
                 <label>Ngày Học:</label>
                 <input type="text" id="edit-date" />

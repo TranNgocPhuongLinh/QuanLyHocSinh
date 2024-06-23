@@ -1,4 +1,4 @@
-let students = [];
+let students = JSON.parse(localStorage.getItem('students')) || [];
 
 document.getElementById('form-hoc-sinh').addEventListener('submit', (e) => {
   e.preventDefault();
@@ -24,7 +24,6 @@ window.addEventListener('load',() => {
 });
 
 function renderStudentTable() {
-    students = JSON.parse(localStorage.getItem('students')) || [];
     let studentList = document.getElementById('student-list');
     studentList.innerHTML = '';
     students.forEach((student, index) => {
@@ -38,9 +37,9 @@ function renderStudentTable() {
         <td>${student.monHoc}</td>
         <td>${student.hocPhi}</td>
         <td>
-        <button class="edit-btn" data-index="${index}">
+        <button class="edit-btn" data-index="${index}" style="width:30px;">
         <i class="fa-solid fa-pen-to-square"></i></button>
-        <button class="delete-btn" data-index="${index}">
+        <button class="delete-btn" data-index="${index}" style="width:30px;">
         <i class="fa-solid fa-trash"></i></button>
         </td>
       `;

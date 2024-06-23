@@ -4,6 +4,10 @@
     padding: 10px;
 }
 
+#form-hoc-sinh label, #form-hoc-sinh input{
+    margin-bottom: 10px;
+}
+
 #form-hoc-sinh button{
     margin-left: 10px;
     width: 60px;
@@ -11,7 +15,7 @@
 
 #student-table table{
     border: 1px solid black;
-    width: 50%;
+    width: 100%;
 }
 
 #student-table table thead tr th{
