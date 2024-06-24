@@ -29,14 +29,14 @@ function renderStudentTable() {
     students.forEach((student, index) => {
       let tableRow = document.createElement('tr');
       tableRow.innerHTML = `
-        <td>${student.id}</td>
+        <td style = "text-align: center;">${student.id}</td>
         <td>${student.name}</td>
-        <td>${student.grade}</td>
-        <td>${student.gioiTinh}</td>
+        <td style = "text-align: center;">${student.grade}</td>
+        <td style = "text-align: center;">${student.gioiTinh}</td>
         <td>${student.ngayHoc}</td>
         <td>${student.monHoc}</td>
         <td>${student.hocPhi}</td>
-        <td>
+        <td style = "text-align: center;">
         <button class="edit-btn" data-index="${index}" style="width:30px;">
         <i class="fa-solid fa-pen-to-square"></i></button>
         <button class="delete-btn" data-index="${index}" style="width:30px;">

@@ -1,51 +1,43 @@
-#form-hoc-sinh{
+#form-payments{
     border: 1px solid black;
-    margin: 10px 20px 10px 20px;
+    margin: 10px 20px;
     padding: 10px;
     font-size: 110%;
 }
 
-#input h2{
-    margin-left: 10px;
-}
-
-#form-hoc-sinh label, #form-hoc-sinh input{
-    margin-bottom: 10px;
-}
-
-#form-hoc-sinh button{
+#form-payments button{
     margin-left: 10px;
     width: 50px;
 }
 
-#student-table{
-    margin: 20px auto 20px auto;
+#payments-table{
+    margin: 20px auto;
 }
 
-#student-table h2{
+#payments-table h2{
     text-align: center;
 }
 
-#student-table table{
+#payments-table table{
     border: 1px solid black;
     width: 100%;
     font-size: 110%;
 }
 
-#student-table table thead tr th{
+#payments-table table thead tr th{
     border: 1px solid black;
     padding-left: 3px;
     text-align: center;
     font-size: 130%;
 }
 
-#student-table table tbody tr td{
+#payments-table table tbody tr td{
     border: 1px solid black;
     padding-left: 3px;
     margin-left: 10px;
 }
 
-#student-table table tbody tr td button{
+#payments-table table tbody tr td button{
     margin: 5px;
     width: 50px;
     height: 30px;
