@@ -68,6 +68,16 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: none;
   }
+
+  #edit-section #form-edit button{
+    width: 60px;
+    text-align: center;
+  }
+
+  #edit-section button{
+    width: 60px;
+    text-align: center;
+  }
   
   /* Show the popup and overlay */
   .show-popup {
