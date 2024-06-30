@@ -9,9 +9,9 @@
     margin-left: 10px;
 }
 
-#form-hoc-sinh label, #form-hoc-sinh input{
+/* #form-hoc-sinh label, #form-hoc-sinh input{
     margin-bottom: 10px;
-}
+} */
 
 #form-hoc-sinh button{
     margin-left: 10px;
@@ -75,6 +75,16 @@
     margin: 20px auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: none;
+  }
+
+  #edit-section #form-edit button{
+    width: 60px;
+    text-align: center;
+  }
+
+  #edit-section button{
+    width: 60px;
+    text-align: center;
   }
   
   /* Show the popup and overlay */

@@ -5,6 +5,10 @@
     font-size: 110%;
 }
 
+/* #form-payments label, #form-payments input{
+    margin-bottom: 10px;
+} */
+
 #form-payments button{
     margin-left: 10px;
     width: 50px;
