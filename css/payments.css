@@ -63,7 +63,9 @@
 
   /* Highlight the current day */
  .ui-datepicker-today {
-    background-color: #ccc;
+    background-color: yellow;
+    font-weight: bold;
+    text-decoration: underline;
     border-radius: 50%;
     text-align: center;
   }
