@@ -49,6 +49,9 @@
 
                 <label for="fee">Học phí: </label>
                 <input type="text" id="fee" name="fee" required>
+
+                <label for="notes">Ghi chú: </label>
+                <textarea name="notes" id="notes"></textarea>
         
                 <button type="submit">Lưu</button>
                 <button type="reset">Đặt lại</button>
@@ -71,6 +74,7 @@
                         <th>Ngày học (Thứ)</th>
                         <th>Môn học</th>
                         <th>Học phí</th>
+                        <th>Ghi chú</th>
                         <th>Công cụ</th>
                     </tr>
                 </thead>
@@ -109,9 +113,13 @@
                 <label>Học Phí: </label>
                 <input type="text" id="edit-fee" />
                 <br />
+                <label >Ghi chú: </label>
+                <textarea id="edit-note"></textarea>
+                <br />
                 <button id="save-btn">Save</button>
+                <button class="close-btn">Close</button>
             </form>
-            <button class="close-btn">Close</button>
+            
           </div>
 
         

@@ -9,11 +9,12 @@ document.getElementById('form-hoc-sinh').addEventListener('submit', (e) => {
   let ngayHoc = document.getElementById('date').value;
   let monHoc = document.getElementById('subject').value;
   let hocPhi = document.getElementById('fee').value;
-  addStudent(id, name, grade, gioiTinh, ngayHoc, monHoc, hocPhi);
+  let ghiChu = document.getElementById('notes').value;
+  addStudent(id, name, grade, gioiTinh, ngayHoc, monHoc, hocPhi, ghiChu);
 });
 
-function addStudent(id, name, grade, gioiTinh, ngayHoc, monHoc, hocPhi) {
-  let student = { id, name, grade, gioiTinh, ngayHoc, monHoc, hocPhi };
+function addStudent(id, name, grade, gioiTinh, ngayHoc, monHoc, hocPhi, ghiChu) {
+  let student = { id, name, grade, gioiTinh, ngayHoc, monHoc, hocPhi, ghiChu };
   students.push(student);
   localStorage.setItem('students', JSON.stringify(students));
   renderStudentTable();
@@ -36,6 +37,7 @@ function renderStudentTable() {
         <td>${student.ngayHoc}</td>
         <td>${student.monHoc}</td>
         <td>${student.hocPhi}</td>
+        <td>${student.ghiChu}</td>
         <td style = "text-align: center;">
         <button class="edit-btn" data-index="${index}" style="width:30px;">
         <i class="fa-solid fa-pen-to-square"></i></button>
@@ -82,6 +84,7 @@ function editStudent(index) {
   let ngayHocInput = document.getElementById('edit-date');
   let monHocInput = document.getElementById('edit-subject');
   let hocPhiInput = document.getElementById('edit-fee');
+  let ghiChuInput = document.getElementById('edit-note');
   
   idInput.value = student.id;
   nameInput.value = student.name;
@@ -90,6 +93,7 @@ function editStudent(index) {
   ngayHocInput.value = student.ngayHoc;
   monHocInput.value = student.monHoc;
   hocPhiInput.value = student.hocPhi;
+  ghiChuInput.value = student.ghiChu;
   
   let saveButton = document.getElementById('save-btn');
   saveButton.addEventListener('click', (e) => {
@@ -101,6 +105,7 @@ function editStudent(index) {
     student.ngayHoc = ngayHocInput.value;
     student.monHoc = monHocInput.value;
     student.hocPhi = hocPhiInput.value;
+    student.ghiChu = ghiChuInput.value;
     localStorage.setItem('students', JSON.stringify(students));
     editSection.style.display = 'none'; // hide the popup edit section
     overlay.classList.remove('show-popup');
