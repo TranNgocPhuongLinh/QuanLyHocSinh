@@ -1,3 +1,73 @@
+ /* Make the datepicker container wider */
+ .ui-datepicker {
+    position: relative;
+    width: 205px;
+    border: 1px solid black;
+    background-color:#f0f0f0;
+  }
+
+  /* Change the background color of the header */
+ .ui-datepicker-header {
+    background-color:aqua;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+
+  /* Make the previous and next buttons larger */
+
+  .ui-datepicker-prev span, .ui-datepicker-next span{
+    display: none;
+  }
+  .ui-datepicker-prev::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    content: '\f104';
+    cursor: pointer;
+    color: black;
+    float: left;
+  }
+  
+  .ui-datepicker-next::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    content: '\f105';
+    cursor: pointer;
+    color: black;
+    float: right;
+  }
+
+
+  /* Change the text color of the days */
+ .ui-datepicker-days {
+    color: #666;
+  }
+
+.ui-state-default{
+    text-decoration: none;
+    color: black;
+}
+
+  .ui-datepicker td{
+    padding: 6px;
+    margin: 4px;
+  }
+
+  /* Highlight the current day */
+ .ui-datepicker-today {
+    background-color: #ccc;
+    border-radius: 50%;
+    text-align: center;
+  }
+
 #form-payments{
     border: 1px solid black;
     margin: 10px 20px;
